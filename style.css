@@ -1,0 +1,678 @@
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    /* background-color: #f0f0f0; */
+    
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0; 
+}
+
+
+/* Header styles */
+/* header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+    color: #fff;
+    padding: 7px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}  */
+
+
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #333; 
+    color: #fff;
+    padding: 20px 0;
+    
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 20px; 
+    width: 90%;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Slider styles with left padding */
+.slider {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 40px; /* Left padding for slider text */
+    color: #fff;
+    text-align: left;
+    transition: all 0.5s ease;
+    font-size: 100%;
+}
+
+.slide.active {
+    left: 0;
+}
+
+.slide:nth-child(1) {
+    background-image: url('slide1_G.png');
+}
+
+.slide:nth-child(2) {
+    background-image: url('slide2_G.png');
+}
+
+.slide:nth-child(3) {
+    background-image: url('slide3_G.png');
+}
+
+.slide .content {
+    padding-left: 20px 0px;
+    margin-left: 40px;
+    max-width: 70%;
+    min-width: 300px;
+    
+
+}
+/* .slide .content{
+    padding-left: 20px 0px;
+    width: 60%;
+} */
+
+/* .slide h3 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+} */
+
+/* .slide .p{
+    font-size: 0.5rem;
+} */
+
+/* .content{
+
+
+/* Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.arrow.left {
+    left: 20px;
+}
+
+.arrow.right {
+    right: 20px;
+}
+
+/* Section styles */
+section {
+    padding: 60px 0;
+}
+
+#about {
+    background-color: #f0f0f0;
+}
+
+
+.services-light {
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark text */
+}
+
+.services-light ul li {
+    color: #333333; /* Ensure dark text in the list */
+}
+
+
+#materials {
+    background-color: #e0f7fa;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+section h3 {
+    font-size: 3.0rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+section ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding-left: 0; 
+    margin-left: 0; 
+}
+
+
+
+section ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+
+    list-style-type: none;
+    padding-left: 0;
+    
+    
+}
+
+/* Footer styles */
+footer {
+    background: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: left;
+}
+
+footer h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Default burger menu styles */
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001; /* Keep burger menu above the nav-menu */
+    margin-top: -5px;
+}
+
+.burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* When the menu is active, hide the first and third lines */
+.burger-menu.active div:nth-child(1),
+.burger-menu.active div:nth-child(3) {
+    opacity: 0;
+}
+
+.burger-menu.active div:nth-child(2) {
+    transform: none;
+    background-color: #fff; /* Keep the middle line visible */
+    opacity: 1; /* Ensure it's visible */
+}
+
+
+.nav-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.nav-menu ul li {
+    margin: 20px 0;
+}
+
+.nav-menu ul li a {
+    color: white;
+    font-size: 2rem;
+}
+
+/* About Section Container (default for larger screens) */
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    max-width: 90%;
+}
+
+/* Image Styling for Desktop */
+.about-image img {
+    width: 150%;
+    max-width: 50%; /* Ensure image size */
+    height: auto;
+    margin-right: 5px; /* Reduced margin to bring image closer to text */
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Content Styling for Desktop */
+.about-content {
+    flex: 1;
+    max-width: 50%; /* Adjust text size proportionally */
+    text-align: left;
+    padding: 0 80px; /* Reduced padding to bring content closer */
+}
+
+/* Dynamic Image Styling (adjusts based on viewport width) */
+#about img {
+    width: 100%; /* Ensure image scales with its container */
+    max-width: 80vw; /* Dynamic width based on the viewport */
+    min-width: 30vw;
+    margin-left: 3vw;
+    height: auto;
+    margin-right: 20px;
+    object-fit: cover; /* Ensure the image is fully visible */
+}
+
+/* Dynamic Text Content Area */
+#about .content {
+    max-width: 50%; /* Adjust for dynamic layout */
+    text-align: left;
+    margin-left: 20px; /* Default margin between text and image */
+}
+
+/* Tablet and Mobile Adjustments (iPad Air and Pro) */
+@media screen and (max-width: 1023px) {
+    .about-container {
+        flex-direction: column; /* Stack the image above the text */
+        align-items: flex-start; /* Align content to the left */
+        justify-content: flex-start;
+        padding: 20px 5%; /* Ensure the section takes 90% of the width */
+        max-width: 90%;
+    }
+
+    .about-image img {
+        width: 100%; /* Make the image take up full width */
+        max-width: 100%; /* Remove restrictive max-width */
+        margin-bottom: 20px; /* Add space below the image */
+    }
+
+    .about-content {
+        max-width: 100%; /* Make text take full width */
+        padding: 0; /* Ensure no excessive padding */
+        text-align: left; /* Keep text aligned to the left */
+    }
+
+    h2 {
+        font-size: 1.6rem; /* Adjust heading size */
+    }
+
+    p {
+        font-size: 1.1rem; /* Adjust text size */
+        line-height: 1.7; /* Adjust line height */
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .about-content{
+        max-width: 90%;
+    }
+}
+
+
+.light-container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    
+}
+
+
+
+
+
+.black-container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    
+}
+
+
+
+
+/* Світла секція для послуг */
+.services-light {
+    padding: 60px 0;
+    background-color: #ffffff; /* Білий фон */
+    color: #333333; /* Чорний текст */
+}
+
+/* Wrapper для світлої секції */
+.services-wrapper-light {
+    display: flex;
+    flex-direction: column; /* Колонка за замовчуванням (для мобільних) */
+    justify-content: space-between;
+}
+
+/* Індивідуальні елементи сервісів (світла версія) */
+.services-light .service-item-light {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 350px;
+    padding-bottom: 30px;
+}
+
+/* Збільшуємо іконки (світла версія) */
+.services-light .service-item-light img {
+    /* max-width: 300px;
+    height: 200px; */
+    width:100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+/* Текст у кожному сервісному елементі (світла версія) */
+.services-light .service-text-light {
+    font-size: 1.1em;
+    color: #333333; /* Чорний текст */
+    line-height: 1.5;
+    padding: 0 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Для планшетів і більших екранів (світла версія) */
+@media (min-width: 768px) {
+    .services-wrapper-light {
+        flex-direction: row;
+        jutify-content: space-between;
+        gap: 20px;
+    }
+
+    .services-light .service-item-light {
+        width: 30%;
+    }
+
+    .services-light .service-item-light img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 35px;
+    }
+
+    .services-light .service-text-light {
+        font-size: 1em;
+        color: #333333; /* Чорний текст */
+    }
+}
+
+/* Для великих екранів (десктоп) (світла версія) */
+@media (min-width: 1024px) {
+    .services-light .service-item-light {
+        width: 30%;
+    }
+
+    .services-light .service-item-light img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .services-light .service-text-light {
+        font-size: 0.9em;
+        color: #333333; /* Чорний текст */
+    }
+}
+
+/* Темна секція для послуг */
+.services-dark {
+    padding: 60px 0;
+    background-color: #333333; /* Темний фон */
+    color: #ffffff; /* Білий текст */
+}
+
+/* Wrapper для темної секції */
+.services-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Індивідуальні елементи сервісів (темна версія) */
+.services-dark .service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 350px;
+    padding-bottom: 30px;
+}
+
+/* Збільшуємо іконки (темна версія) */
+.services-dark .service-item img {
+    max-width: 200px;
+    height: 120px;
+    margin-bottom: 30px;
+}
+
+/* Текст у кожному сервісному елементі (темна версія) */
+.services-dark .service-text {
+    font-size: 1.1em;
+    color: #ffffff; /* Білий текст */
+    line-height: 1.5;
+    padding: 0 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Для планшетів і більших екранів (темна версія) */
+@media (min-width: 768px) {
+    .services-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .services-dark .service-item {
+        width: 30%;
+    }
+
+    .services-dark .service-item img {
+        max-width: 140px;
+        height: 140px;
+        margin-bottom: 35px;
+    }
+
+    .services-dark .service-text {
+        font-size: 1em;
+        color: #ffffff; /* Білий текст */
+    }
+}
+
+/* Для великих екранів (десктоп) (темна версія) */
+@media (min-width: 1024px) {
+    .services-dark .service-item {
+        width: 30%;
+    }
+
+    .services-dark .service-item img {
+        max-width: 160px;
+        height: 160px;
+    }
+
+    .services-dark .service-text {
+        font-size: 0.9em;
+        color: #ffffff; /* Білий текст */
+    }
+}
+
+
+/* Styles for the Materials Section */
+#materials {
+    padding: 40px 0;
+
+    background-color: #f9f9f9;
+}
+
+/* Styles for the Icons Grid */
+.materials-icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 картинки в ряд на мобільних */
+    gap: 20px;
+    justify-items: center; /* Центруємо іконки по горизонталі */
+    margin-top: 20px;
+}
+
+/* Material Icon Sizing */
+.material-icon {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.3s ease;
+}
+
+.material-icon:hover {
+    transform: scale(1.1); /* Збільшення при наведенні */
+}
+
+/* Adjust layout for tablets and larger screens */
+@media (min-width: 768px) {
+    .materials-icons {
+        grid-template-columns: repeat(4, 1fr); /* 2 ряди по 4 колонки на планшетах */
+    }
+}
+
+@media (min-width: 1024px) {
+    .materials-icons {
+        grid-template-columns: repeat(4, 1fr); /* 4 ряди по 2 колонки на десктопах */
+    }
+}
+
+@media (min-width: 1440px) {
+    .materials-icons {
+        grid-template-columns: repeat(8, 1fr); /* 1 ряд по 8 колонок на великих екранах */
+    }
+}
